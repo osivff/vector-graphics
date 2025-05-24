@@ -4,13 +4,252 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scalable Vector Graphics | Oscar Fitch</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Scalable Vector Graphics</h1>
+        <h1>Scalable Vector Graphic (SVG)</h1>
     </header>
     <main>
-        
+        <article>
+            <div class="introduction-container">
+            <h2>What are SVGs?</h2>
+            <p>
+                Scalable Vector Graphics (SVG) are resolution-independent images that stay crisp and clear at 
+                any size. As two-dimensional graphics defined using XML, SVGs are perfect for modern web 
+                design—supporting responsiveness, animation, and interactivity.
+            </p>
+            <p>
+                You can use SVGs in several ways: reference them with the <code>&lt;img&gt;</code> tag in HTML, 
+                embed them as CSS backgrounds using <code>background-image: url('image.svg');</code>, or include 
+                them directly in your HTML as inline SVG code.
+            </p>
+            </div>
+        </article>
+        <article>
+            <section>
+                <h2>Inline</h2>
+                <div class="svg-inline-container">
+                <p>
+                    The following examples showcase basic types of SVGs that can be created using XML.
+                    These shapes are added using the inline method, meaning they are embedded directly 
+                    within the HTML file. Below is an example of the structure:
+                </p>
+                    <pre>
+                        <code>
+     &lt;html&gt;
+         &lt;head&gt;
+         &lt;/head&gt;
+         &lt;body&gt;
+             &lt;svg&gt;
+                 &lt;circle/&gt;
+                 &lt;rect/&gt;
+             &lt;/svg&gt;
+         &lt;/body&gt;
+     &lt;/html&gt;
+                        </code>
+                    </pre>
+                    <p>Some pros for using this are: </p>
+                    <ul>
+                        <li>Style using CSS/Javascript</li>
+                        <li>Alter anytime you want</li>
+                        <li>Use for light design</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h4>Basic Circle</h4>
+                <div class="basic-circle-container">
+                    <p>Below is a basic circle using <code><strong>&lt;circle&gt;</strong></code></p>
+                    <!-- circle -->
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    height="100"
+                    width="100"
+                    viewBox="0 0 75 75"
+                    >
+                        <title>Black Circle</title>
+                        <circle cx="37.5" cy="37.5" fill="black" r="37.5"></circle>
+                    </svg>
+                </div>
+            </section>
+            <section>
+                <h4>Basic Square/Rectangle</h4>
+                <div class="basic-square-container">
+                    <p>Below is a basic square and rectangles using <code><strong>&lt;rect&gt;</strong></code></p>
+                    <!-- Square -->
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    height="100"
+                    width="100"
+                    viewBox="0 0 75 75"
+                    >
+                        <title>Square</title>
+                        <rect width="75" height="75" fill="black"></rect>
+                    </svg>
+                    <!-- Rectangle -->
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    height="100"
+                    width="100"
+                    viewBox="0 0 75 75"
+                    >
+                        <title>Rectangle</title>
+                        <rect width="40" height="75" fill="black"></rect>
+                    </svg>
+                </div>
+            </section>
+            <section>
+                <h4>Basic Ellipse</h4>
+                <div class="basic-ellipse-container">
+                    <p>Below is a basic ellipse using <code><strong>&lt;ellipse&gt;</strong></code></p>
+                    <!-- Ellipse -->
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    height="100"
+                    width="100"
+                    viewBox="0 0 75 75"
+                    >
+                        <title>Ellipse</title>
+                        <ellipse rx="37.5" ry="25" cx="37.5" cy="37.5" fill="black"></ellipse>
+                    </svg>
+                </div>
+            </section>
+            <section>
+                <h4>Basic Line</h4>
+                <p>Below is a basic line using <code><strong>&lt;line&gt;</strong></code></p>
+                <!-- Line -->
+                <svg xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                height="100"
+                width="100"
+                viewBox="0 0 75 75"
+                >
+                    <title>Line</title>
+                    <line x1="0" y1="0" x2="75" y2="75" stroke="black" stroke-width="3"></line>
+                </svg>
+            </section>
+        </article>
+        <article>
+            <h3>More Advanced Shapes</h3>
+            <p>
+                Polylines, polygons, and paths are more complex shapes, but they are essential 
+                for learning and mastering SVGs.
+            </p>
+            <section>
+                <h4>Polylines</h4>
+                <p>Below is a polyline using <code><strong>&lt;polyline&gt;</strong></code></p>
+                <!-- Polyline -->
+                <svg xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                height="100"
+                width="100"
+                viewBox="0 0 75 75"
+                >
+                    <title>Polyline</title>
+                    <polyline 
+                    points="0,10 10,10 10,20 20,20 20,30 30,30 30,40 40,40 40,50 50,50 50,60 60,60 60,70 70,70" 
+                    stroke="black" 
+                    stroke-width="2"
+                    fill="none" /> 
+                </svg>
+            </section>
+            <section>
+                <h4>Polygons</h4>
+                <p>Below are a triangle and arrow using <code><strong>&lt;polygon&gt;</strong></code></p>
+                <!-- Triangle -->
+                <svg xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                height="100"
+                width="100"
+                viewBox="0 0 75 75"
+                >
+                    <title>Polygon</title>
+                    <polygon points="0,0 37.5,75 75,0"/>        
+                </svg>
+                <!-- Arrow -->
+                <svg xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="100"
+                height="100"
+                viewBox="0 0 75 75"
+                >
+                <title>Black arrow</title>
+                <polygon points="0,0 37.5,75 75,0 37.5,15"/>        
+                </svg>
+            </section>
+            <section>
+                <h4>Path</h4>
+                <p>Below is a curve line using <code><strong>&lt;path&gt;</strong></code></p>
+                <!-- Curve Line -->
+                 <svg xmlns="http://www.w3.org/2000/svg"
+                 version="1.1"
+                 height="100"
+                 width="100"
+                 viewBox="0 0 75 75"
+                 >
+                    <title>Curve Line</title>
+                     <path d="M75,75 Q50,0 30,20 T10,0" 
+                    stroke="black" 
+                    fill="none"
+                    stroke-width="2"
+                    />       
+                </svg>
+            </section>
+        </article>
+        <article>
+            <h3>Embed SVG Using <code>&lt;img&gt;</code></h3>
+            <p>
+                While you can create SVG shapes by embedding them directly into HTML, this approach 
+                can make the code look messy—especially with more complex shapes, which can be difficult 
+                to read and manage. Because of this, it’s often better to embed SVGs using the 
+                <code>&lt;img&gt;</code> tag.
+            </p>
+            <p>
+                You can create your own SVG images in a separate XML file and save it with a 
+                <code>.svg</code> extension. Below are the same shapes from earlier, but this time embedded 
+                using the <code>&lt;img&gt;</code> tag.
+            </p>
+            <section class="img-wrap">
+                <div class="img-container">
+                    <h4>Circle</h4>
+                    <img src="./imgs/circle.svg" alt="black svg circle">
+                </div>
+                <div class="img-container">
+                    <h4>Square</h4>
+                    <img src="./imgs/square.svg" alt="black svg square">
+                </div>
+                <div class="img-container">
+                    <h4>Rectangle</h4>
+                    <img src="./imgs/rectangle.svg" alt="black svg rectangle">
+                </div>
+                <div class="img-container">
+                    <h4>Ellipse</h4>
+                    <img src="./imgs/ellipse.svg" alt="black svg ellipse">
+                </div>
+                <div class="img-container">
+                    <h4>Line</h4>
+                    <img src="./imgs/line.svg" alt="black svg line">
+                </div>
+                <div class="img-container">
+                    <h4>Polyline</h4>
+                    <img src="./imgs/polyline.svg" alt="black svg polyline">
+                </div>
+                <div class="img-container">
+                    <h4>Triangle</h4>
+                    <img src="./imgs/triangle.svg" alt="black svg triangle">
+                </div>
+                <div class="img-container">
+                    <h4>Arrow</h4>
+                    <img src="./imgs/arrow.svg" alt="black svg arrow">
+                </div>
+                <div class="img-container">
+                    <h4>Curve Line</h4>
+                    <img src="./imgs/curve-line.svg" alt="black svg curve line">
+                </div>
+            </section>
+
+        </article>
     </main>
 </body>
 </html>
