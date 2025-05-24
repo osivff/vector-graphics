@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: rgba(181, 208, 251, 0.842);
+}
+
+header {
+    margin: 0;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    margin: 0 auto;
+    background-color: rgba(251, 251, 251, 0.5);
+    padding: 1rem;
+    width: 80%;
+}
+
+.img-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+pre {
+    width: 30%;
+    background-color: rgba(128, 128, 128, 0.223);
+}
